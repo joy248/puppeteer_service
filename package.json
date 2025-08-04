@@ -1,0 +1,14 @@
+{
+  "name": "html-to-pdf-server",
+  "version": "1.0.0",
+  "description": "Node.js server to convert HTML to PDF using Puppeteer",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "puppeteer": "^21.3.8"
+  }
+}
