@@ -5,10 +5,10 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 
-    const app = express();
-    const port = 3000;
+const app = express();
+const port = 3000;
 
-    app.use(bodyParser.text({ type: 'text/html' }));
+app.use(bodyParser.text({ type: 'text/html' }));
 
 app.post('/html-to-pdf', async (req, res) => {
     const html = req.body;
