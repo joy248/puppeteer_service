@@ -1,6 +1,8 @@
+
+
 FROM node:18-slim
 
-# Install Chromium dependencies and Chromium
+# Install Chromium and dependencies
 RUN apt-get update && apt-get install -y \
     wget ca-certificates fonts-liberation \
     libappindicator3-1 libasound2 libatk-bridge2.0-0 \
@@ -17,9 +19,6 @@ RUN npm install
 
 COPY . .
 
-# Set Puppeteer to use system Chromium
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
-
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["node", "src/index.js"]
